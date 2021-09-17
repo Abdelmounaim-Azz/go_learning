@@ -21,12 +21,13 @@ func main() {
 			zipCode: 12345,
 		},
 	}
-	john.updateFirstName("Johnny")
+	joinP := &john
+	joinP.updateFirstName("Johnny")
 	john.print()
 }
 
-func (p person) updateFirstName(newFirstName string) {
-	p.firstName = newFirstName
+func (pointerToPerson *person) updateFirstName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
 }
 func (p person) print() {
 	fmt.Printf("%+v", p)
