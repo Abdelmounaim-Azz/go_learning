@@ -21,8 +21,7 @@ func main() {
 			zipCode: 12345,
 		},
 	}
-	joinP := &john
-	joinP.updateFirstName("Johnny")
+	john.updateFirstName("Johnny")
 	john.print()
 }
 
