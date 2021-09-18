@@ -16,7 +16,9 @@ func main() {
 	for _, link := range links {
 		go checkLink(link, c)
 	}
-	fmt.Println(<-c)
+	for i := 0; i < len(links); i++ {
+		fmt.Println(<-c)
+	}
 }
 
 func checkLink(link string, c chan string) {
